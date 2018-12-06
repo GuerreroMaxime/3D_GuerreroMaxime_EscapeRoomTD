@@ -1,0 +1,146 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://script/Salle1_(départ).gd" type="Script" id=1]
+[ext_resource path="res://graphisme/fond.png" type="Texture" id=2]
+[ext_resource path="res://graphisme/rotabouton.png" type="Texture" id=3]
+[ext_resource path="res://graphisme/porte_gauche.png" type="Texture" id=4]
+[ext_resource path="res://graphisme/porte_droite.png" type="Texture" id=5]
+[ext_resource path="res://graphisme/porte_bas.png" type="Texture" id=6]
+[ext_resource path="res://graphisme/porte_haut.png" type="Texture" id=7]
+[ext_resource path="res://graphisme/moove.png" type="Texture" id=8]
+
+[node name="Salle1 (départ)" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="Graphisme" type="Node" parent="." index="0"]
+
+[node name="fond" type="Sprite" parent="Graphisme" index="0"]
+
+position = Vector2( 512.438, 299.457 )
+scale = Vector2( 1.67604, 1.95407 )
+texture = ExtResource( 2 )
+
+[node name="rotabouton" type="Sprite" parent="Graphisme" index="1"]
+
+position = Vector2( 514.46, 306.222 )
+scale = Vector2( 1.55263, 1.60803 )
+texture = ExtResource( 3 )
+
+[node name="porte_gauche" type="Sprite" parent="Graphisme" index="2"]
+
+visible = false
+position = Vector2( 144.175, 407.615 )
+scale = Vector2( 1.55263, 1.60803 )
+texture = ExtResource( 4 )
+
+[node name="porte_droite" type="Sprite" parent="Graphisme" index="3"]
+
+visible = false
+position = Vector2( 879.476, 410.854 )
+scale = Vector2( 1.55263, 1.60803 )
+texture = ExtResource( 5 )
+
+[node name="porte_bas" type="Sprite" parent="Graphisme" index="4"]
+
+position = Vector2( 512.039, 540.708 )
+scale = Vector2( 1.76292, 2.01311 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="porte_haut" type="Sprite" parent="Graphisme" index="5"]
+
+visible = false
+position = Vector2( 509.548, 73.132 )
+scale = Vector2( 1.53655, 1.84075 )
+texture = ExtResource( 7 )
+
+[node name="moove" type="Sprite" parent="Graphisme" index="6"]
+
+visible = false
+position = Vector2( 815.136, 471.153 )
+scale = Vector2( 1.911, 1.97802 )
+texture = ExtResource( 8 )
+
+[node name="Interaction" type="Node" parent="." index="1"]
+
+[node name="Nextroom" type="Button" parent="Interaction" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 767.0
+margin_top = 437.0
+margin_right = 859.0
+margin_bottom = 505.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Button_droite" type="Button" parent="Interaction" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 522.0
+margin_top = 293.0
+margin_right = 543.0
+margin_bottom = 322.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Button_gauche" type="Button" parent="Interaction" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 484.0
+margin_top = 291.0
+margin_right = 508.0
+margin_bottom = 323.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[connection signal="pressed" from="Interaction/Nextroom" to="." method="_on_Nextroom_pressed"]
+
+[connection signal="pressed" from="Interaction/Button_droite" to="." method="_on_Button_droite_pressed"]
+
+[connection signal="pressed" from="Interaction/Button_gauche" to="." method="_on_Button_gauche_pressed"]
+
+

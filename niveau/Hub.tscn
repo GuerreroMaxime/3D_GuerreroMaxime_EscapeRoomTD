@@ -1,0 +1,161 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://script/Hub.gd" type="Script" id=1]
+[ext_resource path="res://graphisme/fond.png" type="Texture" id=2]
+[ext_resource path="res://graphisme/porte_fond.png" type="Texture" id=3]
+[ext_resource path="res://graphisme/lock.png" type="Texture" id=4]
+[ext_resource path="res://graphisme/porte_droite.png" type="Texture" id=5]
+[ext_resource path="res://graphisme/porte_gauche.png" type="Texture" id=6]
+[ext_resource path="res://graphisme/Inventaire.png" type="Texture" id=7]
+[ext_resource path="res://graphisme/cle.png" type="Texture" id=8]
+
+[node name="Hub" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="Graphisme" type="Node" parent="." index="0"]
+
+[node name="fond" type="Sprite" parent="Graphisme" index="0"]
+
+position = Vector2( 511.362, 300.944 )
+scale = Vector2( 1.67468, 1.95153 )
+texture = ExtResource( 2 )
+
+[node name="porte_fond" type="Sprite" parent="Graphisme" index="1"]
+
+position = Vector2( 359.751, 363.901 )
+scale = Vector2( 1.4759, 1.6819 )
+texture = ExtResource( 3 )
+
+[node name="porte_fond2" type="Sprite" parent="Graphisme" index="2"]
+
+position = Vector2( 670.152, 364.626 )
+scale = Vector2( 1.54441, 1.73403 )
+texture = ExtResource( 3 )
+
+[node name="porte_fond3" type="Sprite" parent="Graphisme" index="3"]
+
+position = Vector2( 516.762, 325.934 )
+scale = Vector2( 1.54441, 2.36772 )
+texture = ExtResource( 3 )
+
+[node name="lock" type="Sprite" parent="Graphisme" index="4"]
+
+position = Vector2( 516.021, 339.187 )
+scale = Vector2( 2.36953, 2.74573 )
+texture = ExtResource( 4 )
+
+[node name="porte_droite" type="Sprite" parent="Graphisme" index="5"]
+
+position = Vector2( 850.549, 398.812 )
+scale = Vector2( 1.47031, 1.64174 )
+texture = ExtResource( 5 )
+
+[node name="porte_gauche" type="Sprite" parent="Graphisme" index="6"]
+
+position = Vector2( 169.768, 390.861 )
+scale = Vector2( 1.4109, 1.63494 )
+texture = ExtResource( 6 )
+
+[node name="Inventaire" type="Sprite" parent="Graphisme" index="7"]
+
+position = Vector2( 925.798, 33.323 )
+texture = ExtResource( 7 )
+
+[node name="cle" type="Sprite" parent="Graphisme" index="8"]
+
+position = Vector2( 921.302, 32.5288 )
+texture = ExtResource( 8 )
+
+[node name="TextEdit" type="TextEdit" parent="Graphisme" index="9"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 472.0
+margin_top = 299.0
+margin_right = 561.0
+margin_bottom = 360.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+text = "Bravo"
+readonly = true
+highlight_current_line = false
+syntax_highlighting = false
+show_line_numbers = false
+highlight_all_occurrences = false
+override_selected_font_color = false
+context_menu_enabled = true
+smooth_scrolling = false
+v_scroll_speed = 80.0
+hiding_enabled = 0
+wrap_lines = false
+caret_block_mode = false
+caret_blink = false
+caret_blink_speed = 0.65
+caret_moving_by_right_click = true
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Interaction" type="Node" parent="." index="1"]
+
+[node name="delock" type="Button" parent="Interaction" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 468.0
+margin_top = 250.0
+margin_right = 564.0
+margin_bottom = 431.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Towin" type="Button" parent="Interaction" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 455.0
+margin_top = 178.0
+margin_right = 577.0
+margin_bottom = 466.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[connection signal="pressed" from="Interaction/delock" to="." method="_on_delock_pressed"]
+
+[connection signal="pressed" from="Interaction/Towin" to="." method="_on_Towin_pressed"]
+
+

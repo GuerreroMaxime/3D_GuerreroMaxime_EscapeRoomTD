@@ -1,0 +1,760 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://script/Niveau_2.gd" type="Script" id=1]
+[ext_resource path="res://graphisme/fond.png" type="Texture" id=2]
+[ext_resource path="res://graphisme/moove.png" type="Texture" id=3]
+[ext_resource path="res://graphisme/hub.png" type="Texture" id=4]
+[ext_resource path="res://graphisme/porte_gauche.png" type="Texture" id=5]
+[ext_resource path="res://graphisme/porte_fond.png" type="Texture" id=6]
+[ext_resource path="res://graphisme/updownbuton.png" type="Texture" id=7]
+[ext_resource path="res://graphisme/Fkey1.png" type="Texture" id=8]
+[ext_resource path="res://graphisme/coffre.png" type="Texture" id=9]
+[ext_resource path="res://graphisme/Inventaire.png" type="Texture" id=10]
+[ext_resource path="res://graphisme/Fkey4.png" type="Texture" id=11]
+
+[node name="Niveau_2" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="fond" type="Sprite" parent="." index="0"]
+
+visible = false
+position = Vector2( 511.113, 296.895 )
+scale = Vector2( 1.67384, 1.95565 )
+texture = ExtResource( 2 )
+
+[node name="Bas" type="Sprite" parent="." index="1"]
+
+visible = false
+position = Vector2( 550.579, 189.505 )
+rotation = 1.5708
+scale = Vector2( 1.95565, 1.67384 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Haut" type="Sprite" parent="." index="2"]
+
+visible = false
+position = Vector2( 469.693, 190.613 )
+rotation = 4.71239
+scale = Vector2( 1.95565, 1.67384 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="hub" type="Sprite" parent="." index="3"]
+
+position = Vector2( 513.249, 297.008 )
+scale = Vector2( 1.50049, 1.50432 )
+texture = ExtResource( 4 )
+
+[node name="Depart" type="Node" parent="." index="4"]
+
+[node name="Start" type="Button" parent="Depart" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 805.0
+margin_top = 257.0
+margin_right = 895.0
+margin_bottom = 533.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Lv21" type="Node" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="Graphisme" type="Node" parent="Lv21" index="0"]
+
+editor/display_folded = true
+
+[node name="sortie" type="Sprite" parent="Lv21/Graphisme" index="0"]
+
+visible = false
+position = Vector2( 202.375, 404.761 )
+scale = Vector2( 1.10763, 1.24084 )
+texture = ExtResource( 5 )
+
+[node name="PHG" type="Sprite" parent="Lv21/Graphisme" index="1"]
+
+visible = false
+position = Vector2( 369.676, 192.786 )
+texture = ExtResource( 6 )
+
+[node name="PHD" type="Sprite" parent="Lv21/Graphisme" index="2"]
+
+visible = false
+position = Vector2( 671.061, 193.894 )
+texture = ExtResource( 6 )
+
+[node name="PBD" type="Sprite" parent="Lv21/Graphisme" index="3"]
+
+visible = false
+position = Vector2( 669.953, 405.528 )
+texture = ExtResource( 6 )
+
+[node name="PBG" type="Sprite" parent="Lv21/Graphisme" index="4"]
+
+visible = false
+position = Vector2( 370.784, 405.528 )
+texture = ExtResource( 6 )
+
+[node name="faux" type="Sprite" parent="Lv21/Graphisme" index="5"]
+
+visible = false
+position = Vector2( 506.424, 406.636 )
+texture = ExtResource( 6 )
+
+[node name="updownbuton" type="Sprite" parent="Lv21/Graphisme" index="6"]
+
+visible = false
+position = Vector2( 514.233, 301.453 )
+scale = Vector2( 1.86658, 1.6584 )
+texture = ExtResource( 7 )
+
+[node name="Interaction" type="Node" parent="Lv21" index="1"]
+
+[node name="ABG" type="Button" parent="Lv21/Interaction" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 330.0
+margin_top = 344.0
+margin_right = 408.0
+margin_bottom = 469.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="ABD" type="Button" parent="Lv21/Interaction" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 631.0
+margin_top = 344.0
+margin_right = 709.0
+margin_bottom = 469.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Back" type="Button" parent="Lv21/Interaction" index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 468.0
+margin_top = 344.0
+margin_right = 546.0
+margin_bottom = 469.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Sortir" type="Button" parent="Lv21/Interaction" index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 165.0
+margin_top = 299.0
+margin_right = 237.0
+margin_bottom = 517.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Bhaut" type="Button" parent="Lv21/Interaction" index="4"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 479.0
+margin_top = 289.0
+margin_right = 503.0
+margin_bottom = 315.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Bbas" type="Button" parent="Lv21/Interaction" index="5"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 522.0
+margin_top = 289.0
+margin_right = 548.0
+margin_bottom = 319.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Lv22" type="Node" parent="." index="6"]
+
+editor/display_folded = true
+
+[node name="Graphisme" type="Node" parent="Lv22" index="0"]
+
+[node name="PHG2" type="Sprite" parent="Lv22/Graphisme" index="0"]
+
+visible = false
+position = Vector2( 369.676, 192.786 )
+texture = ExtResource( 6 )
+
+[node name="PHD2" type="Sprite" parent="Lv22/Graphisme" index="1"]
+
+visible = false
+position = Vector2( 671.061, 193.894 )
+texture = ExtResource( 6 )
+
+[node name="PBD2" type="Sprite" parent="Lv22/Graphisme" index="2"]
+
+visible = false
+position = Vector2( 669.953, 405.528 )
+texture = ExtResource( 6 )
+
+[node name="PBG2" type="Sprite" parent="Lv22/Graphisme" index="3"]
+
+visible = false
+position = Vector2( 370.784, 405.528 )
+texture = ExtResource( 6 )
+
+[node name="faux2" type="Sprite" parent="Lv22/Graphisme" index="4"]
+
+visible = false
+position = Vector2( 506.424, 406.636 )
+texture = ExtResource( 6 )
+
+[node name="updownbuton2" type="Sprite" parent="Lv22/Graphisme" index="5"]
+
+visible = false
+position = Vector2( 514.233, 301.453 )
+scale = Vector2( 1.86658, 1.6584 )
+texture = ExtResource( 7 )
+
+[node name="Interaction" type="Node" parent="Lv22" index="1"]
+
+[node name="Bbas2" type="Button" parent="Lv22/Interaction" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 522.0
+margin_top = 289.0
+margin_right = 548.0
+margin_bottom = 319.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Bhaut2" type="Button" parent="Lv22/Interaction" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 479.0
+margin_top = 289.0
+margin_right = 503.0
+margin_bottom = 315.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="ABG2" type="Button" parent="Lv22/Interaction" index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 330.0
+margin_top = 344.0
+margin_right = 408.0
+margin_bottom = 469.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="ABD2" type="Button" parent="Lv22/Interaction" index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 631.0
+margin_top = 344.0
+margin_right = 709.0
+margin_bottom = 469.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Back2" type="Button" parent="Lv22/Interaction" index="4"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 468.0
+margin_top = 344.0
+margin_right = 546.0
+margin_bottom = 469.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Lv23" type="Node" parent="." index="7"]
+
+[node name="Graphisme" type="Node" parent="Lv23" index="0"]
+
+[node name="PHG3" type="Sprite" parent="Lv23/Graphisme" index="0"]
+
+visible = false
+position = Vector2( 369.676, 192.786 )
+texture = ExtResource( 6 )
+
+[node name="PHD3" type="Sprite" parent="Lv23/Graphisme" index="1"]
+
+visible = false
+position = Vector2( 671.061, 193.894 )
+texture = ExtResource( 6 )
+
+[node name="PBD3" type="Sprite" parent="Lv23/Graphisme" index="2"]
+
+visible = false
+position = Vector2( 669.953, 405.528 )
+texture = ExtResource( 6 )
+
+[node name="PBG3" type="Sprite" parent="Lv23/Graphisme" index="3"]
+
+visible = false
+position = Vector2( 370.784, 405.528 )
+texture = ExtResource( 6 )
+
+[node name="faux3" type="Sprite" parent="Lv23/Graphisme" index="4"]
+
+visible = false
+position = Vector2( 506.424, 406.636 )
+texture = ExtResource( 6 )
+
+[node name="updownbuton3" type="Sprite" parent="Lv23/Graphisme" index="5"]
+
+visible = false
+position = Vector2( 514.233, 301.453 )
+scale = Vector2( 1.86658, 1.6584 )
+texture = ExtResource( 7 )
+
+[node name="Interaction" type="Node" parent="Lv23" index="1"]
+
+[node name="Bbas3" type="Button" parent="Lv23/Interaction" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 522.0
+margin_top = 289.0
+margin_right = 548.0
+margin_bottom = 319.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Bhaut3" type="Button" parent="Lv23/Interaction" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 479.0
+margin_top = 289.0
+margin_right = 503.0
+margin_bottom = 315.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="ABG3" type="Button" parent="Lv23/Interaction" index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 330.0
+margin_top = 344.0
+margin_right = 408.0
+margin_bottom = 469.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="ABD3" type="Button" parent="Lv23/Interaction" index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 631.0
+margin_top = 344.0
+margin_right = 709.0
+margin_bottom = 469.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Back3" type="Button" parent="Lv23/Interaction" index="4"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 468.0
+margin_top = 344.0
+margin_right = 546.0
+margin_bottom = 469.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Lv24" type="Node" parent="." index="8"]
+
+editor/display_folded = true
+
+[node name="Graphisme" type="Node" parent="Lv24" index="0"]
+
+[node name="faux" type="Sprite" parent="Lv24/Graphisme" index="0"]
+
+visible = false
+position = Vector2( 506.424, 406.636 )
+texture = ExtResource( 6 )
+
+[node name="Fkey1" type="Sprite" parent="Lv24/Graphisme" index="1"]
+
+visible = false
+position = Vector2( 646.294, 425.108 )
+scale = Vector2( 1.6438, 1.54285 )
+texture = ExtResource( 8 )
+
+[node name="coffre" type="Sprite" parent="Lv24/Graphisme" index="2"]
+
+visible = false
+position = Vector2( 641.167, 430.459 )
+scale = Vector2( 0.886006, 0.951772 )
+texture = ExtResource( 9 )
+
+[node name="Interaction" type="Node" parent="Lv24" index="1"]
+
+[node name="Partir" type="Button" parent="Lv24/Interaction" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 468.0
+margin_top = 344.0
+margin_right = 546.0
+margin_bottom = 469.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="coffre" type="Button" parent="Lv24/Interaction" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 593.0
+margin_top = 393.0
+margin_right = 688.0
+margin_bottom = 466.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Ressource" type="Node" parent="." index="9"]
+
+[node name="moove" type="Sprite" parent="Ressource" index="0"]
+
+position = Vector2( 787.325, 465.434 )
+scale = Vector2( 1.64306, 1.82348 )
+texture = ExtResource( 3 )
+
+[node name="Inventaire" type="Sprite" parent="Ressource" index="1"]
+
+position = Vector2( 925.909, 32.859 )
+texture = ExtResource( 10 )
+
+[node name="Fkey4" type="Sprite" parent="Ressource" index="2"]
+
+position = Vector2( 986.84, 30.6028 )
+scale = Vector2( 1.42536, 1.40657 )
+texture = ExtResource( 11 )
+
+[node name="Fkey1" type="Sprite" parent="Ressource" index="3"]
+
+visible = false
+position = Vector2( 856.951, 31.5612 )
+scale = Vector2( 1.38309, 1.1192 )
+texture = ExtResource( 8 )
+
+[connection signal="pressed" from="Depart/Start" to="." method="_on_Start_pressed"]
+
+[connection signal="pressed" from="Lv21/Interaction/ABG" to="." method="_on_ABG_pressed"]
+
+[connection signal="pressed" from="Lv21/Interaction/ABD" to="." method="_on_ABD_pressed"]
+
+[connection signal="pressed" from="Lv21/Interaction/Back" to="." method="_on_Back_pressed"]
+
+[connection signal="pressed" from="Lv21/Interaction/Sortir" to="." method="_on_Sortir_pressed"]
+
+[connection signal="pressed" from="Lv21/Interaction/Bhaut" to="." method="_on_Bhaut_pressed"]
+
+[connection signal="pressed" from="Lv21/Interaction/Bbas" to="." method="_on_Bbas_pressed"]
+
+[connection signal="pressed" from="Lv22/Interaction/Bbas2" to="." method="_on_Bbas2_pressed"]
+
+[connection signal="pressed" from="Lv22/Interaction/Bhaut2" to="." method="_on_Bhaut2_pressed"]
+
+[connection signal="pressed" from="Lv22/Interaction/ABG2" to="." method="_on_ABG2_pressed"]
+
+[connection signal="pressed" from="Lv22/Interaction/ABD2" to="." method="_on_ABD2_pressed"]
+
+[connection signal="pressed" from="Lv22/Interaction/Back2" to="." method="_on_Back2_pressed"]
+
+[connection signal="pressed" from="Lv23/Interaction/Bbas3" to="." method="_on_Bbas3_pressed"]
+
+[connection signal="pressed" from="Lv23/Interaction/Bhaut3" to="." method="_on_Bhaut3_pressed"]
+
+[connection signal="pressed" from="Lv23/Interaction/ABG3" to="." method="_on_ABG3_pressed"]
+
+[connection signal="pressed" from="Lv23/Interaction/ABD3" to="." method="_on_ABD3_pressed"]
+
+[connection signal="pressed" from="Lv23/Interaction/Back3" to="." method="_on_Back3_pressed"]
+
+[connection signal="pressed" from="Lv24/Interaction/Partir" to="." method="_on_Partir_pressed"]
+
+[connection signal="pressed" from="Lv24/Interaction/coffre" to="." method="_on_coffre_pressed"]
+
+
